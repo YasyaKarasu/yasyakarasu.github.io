@@ -134,7 +134,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/24/isDBfe.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/25/is4nmD.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/25/is4u0e.png">
-<meta property="og:updated_time" content="2018-10-24T23:53:32.967Z">
+<meta property="og:updated_time" content="2018-10-25T04:20:12.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo和Github搭建博客">
 <meta name="twitter:description" content="0.引子本来博客存在ide.coding.net里面，建了个工作空间什么的。然后。。。有一天他告诉我他要转移到腾讯云上面去。。。然而转移过去我的文件全是发布用的。。。hexo环境，配置文件啥的都没了。。。于是我就转战本地搭建。。。然后利用github仓库存储。然后。。。配置真的麻烦。。。于是我就把攻略写在这里，一方面帮助其他人，另一方面防止我下次要的时候又忘记了。。。 1.基本安装和配置配置需求环">
@@ -313,7 +313,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="oycy0306">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/ghost.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -367,7 +367,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-25 07:53:32" itemprop="dateModified" datetime="2018-10-25T07:53:32+08:00">2018-10-25</time>
+                <time title="修改时间：2018-10-25 12:20:12" itemprop="dateModified" datetime="2018-10-25T12:20:12+08:00">2018-10-25</time>
               
             
           </span>
@@ -439,13 +439,13 @@
 <p>输入 hexo g</p>
 <p>然后输入 hexo s 开启本地服务器，在浏览器输入给出的网址（应该是localhost:4000）进行访问。（注意访问期间最好不要修改，虽然本人经常这么干好像也没什么问题）</p>
 <p>如果出现一个大标题为 Hexo 的网页那么就是成功了。</p>
-<h2 id="将本地的Hexo与Github仓库联系起来"><a href="#将本地的Hexo与Github仓库联系起来" class="headerlink" title="将本地的Hexo与Github仓库联系起来"></a>将本地的Hexo与Github仓库联系起来</h2><h3 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h3><p>我们需要生成SSH密钥。在git窗口中，输入 ssh-heygen -t rsa -C “你的邮箱” （这里我不是很确定你的邮箱是不是应该填guthub的注册邮箱，不过保险起见还是这么干吧），然后他会询问你存储地址和密码，可以一路回车下去采用默认地址和空密码，也可以自定义（默认路径是C:\Users\用户名\ .ssh）</p>
+<h2 id="将本地的Hexo与Github仓库联系起来"><a href="#将本地的Hexo与Github仓库联系起来" class="headerlink" title="将本地的Hexo与Github仓库联系起来"></a>将本地的Hexo与Github仓库联系起来</h2><h3 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h3><p>我们需要生成SSH密钥。在git窗口中，输入 ssh-keygen -t rsa -C “你的邮箱” （这里我不是很确定你的邮箱是不是应该填github的注册邮箱，不过保险起见还是这么干吧），然后他会询问你存储地址和密码，可以一路回车下去采用默认地址和空密码，也可以自定义（默认路径是C:\Users\用户名\ .ssh）</p>
 <p>输入 eval “$(ssh-agent -s)” ，添加密钥到ssh-agent。</p>
 <p>再输入 ssh-add ~/.ssh/id_rsa ，添加生成的SSH key到ssh-agent。</p>
 <h3 id="加入SSH密钥到你的Github账户中"><a href="#加入SSH密钥到你的Github账户中" class="headerlink" title="加入SSH密钥到你的Github账户中"></a>加入SSH密钥到你的Github账户中</h3><p>登陆你的Github账户，点击头像，打开菜单，点击Settings，选择左侧的<strong>SSH and GPG keys</strong>，进入以后应该是如下图的。单击”New SSH key”</p>
 <p><img src="https://s1.ax1x.com/2018/10/24/isDwFO.png" alt="这里是下图"></p>
 <p>随便写一个什么title，像blog之类的，然后把刚才保存的id_rsa.pub里面的内容复制进去（用notepad++之类的工具打开来）。</p>
-<h3 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h3><p>然后在git窗口输入 ssh -T  git ，测试ssh是否添加成功。如果看到HI后面是你的用户名，就说明成功了。</p>
+<h3 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h3><p>然后在git窗口输入 ssh -T  git@guthub.com ，测试ssh是否添加成功。如果看到HI后面是你的用户名，就说明成功了。</p>
 <p><img src="https://s1.ax1x.com/2018/10/24/isDsld.png" alt="Like this"></p>
 <figure class="highlight plain"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">问题：假如ssh-key配置失败，那么只要以下步骤就能完全解决</span><br><span class="line"></span><br><span class="line">首先，清除所有的key-pair</span><br><span class="line">ssh-add -D</span><br><span class="line">rm -r ~/.ssh</span><br><span class="line">删除你在github中的public-key</span><br><span class="line"></span><br><span class="line">重新生成ssh密钥对</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</span><br><span class="line"></span><br><span class="line">接下来正常操作</span><br><span class="line">在github上添加公钥public-key:</span><br><span class="line">1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板</span><br><span class="line">2、在github上添加公钥时，直接复制即可</span><br><span class="line">3、保存</span><br></pre></td></tr></table></figure>
 <h3 id="修改本地博客连接的仓库地址"><a href="#修改本地博客连接的仓库地址" class="headerlink" title="修改本地博客连接的仓库地址"></a>修改本地博客连接的仓库地址</h3><p>添加完成以后，点击头像，打开菜单，选择你的仓库，进入新建的仓库，然后复制这个项目的地址（注意用SSH，如果不是要切换成SSH，不要用HTTPS）</p>
@@ -582,6 +582,8 @@
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/ghost.png" alt="oycy0306">
             
               <p class="site-author-name" itemprop="name">oycy0306</p>
               <p class="site-description motion-element" itemprop="description"></p>
