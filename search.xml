@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[office2019激活]]></title>
-    <url>%2F2018%2F10%2F31%2Foffice2019%E6%BF%80%E6%B4%BB%2F</url>
-    <content type="text"><![CDATA[最近微软发布了Office2019。抛开那些新加的功能（基本上也不太用得到），光启动速度一项就甩Office2016几条大街呢（可能夸张了一点）。本人自然想体验体验啦（其实就是想白嫖），然鹅没有$$$买正版，那就只能另辟蹊径喽…… 下载你说你要是想用却找不到下载的地方……那我也无能为力……别用了吧。 去这里下载吧：MSDN 要是还不会下载……那是真的没救了。 激活从这里下载一下激活工具吧。 然后激活过程也很白痴的。直接点击激活Office那个按钮就可以了。 清除原来的授权信息（如果遇到了这个问题）如果你原来白嫖了Office2016，然后卸载了它，重新安装了Office2019，却在账户的产品信息下看到了这种情况 那么……跟着我做。 第一步：以管理员身份进入cmd（开始菜单搜索cmd，右键以管理员身份运行） 第二步：cd C:\Program Files\Microsoft Office\Office16（如提示找不到路径请用下面这个）cd C:\Program Files (x86)\Microsoft Office\Office16 第三步：cscript ospp.vbs /dstatus 复制进去回车，显示已安装KEY:XXXXX的状态，这里只显示KEY的后5位。 第四步：cscript ospp.vbs /unpkey:XXXXX(KEY的后五位)用命令复制进去回车卸载。（上一步可能会出现很多，那就一个一个卸载） 可能会有的第五步：第四步完成后，请打开word（当然excel啊powerpoint啥的都行），检查一下是否还是激活的状态，如果没有……那就再用神龙KMS激活一遍……]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[QQ消息炸弹]]></title>
     <url>%2F2018%2F10%2F29%2FQQ%E6%B6%88%E6%81%AF%E7%82%B8%E5%BC%B9%2F</url>
     <content type="text"><![CDATA[点此下载]]></content>
