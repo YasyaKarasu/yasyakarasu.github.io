@@ -318,7 +318,22 @@
 
   
 
+<script>
+    
+    window.onload = function(){
+        var path = 'https://oycy0306.cf'; //����Ҫ�ĳ��㲩�͵ĵ�ַ
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+        
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
 
+</script>
 
 </div>
     </header>
