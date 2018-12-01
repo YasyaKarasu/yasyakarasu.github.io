@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[Hello,World!]]></title>
     <url>%2F2018%2F12%2F01%2FHello-World%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[这里是一个菜鸡的博客。您的大驾光临真是令寒舍蓬荜生辉呀。]]></content>
+      <tags>
+        <tag>博客相关</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[[BZOJ 2151]种树 题解]]></title>

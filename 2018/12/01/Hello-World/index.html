@@ -115,14 +115,18 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="这里是一个菜鸡的博客。您的大驾光临真是令寒舍蓬荜生辉呀。">
+<meta name="keywords" content="博客相关">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hello,World!">
 <meta property="og:url" content="https://oycy0306.cf/2018/12/01/Hello-World/index.html">
-<meta property="og:site_name" content="Vege-Land">
+<meta property="og:site_name" content="Vege-Chick-Land">
+<meta property="og:description" content="这里是一个菜鸡的博客。您的大驾光临真是令寒舍蓬荜生辉呀。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-01T00:33:58.019Z">
+<meta property="og:updated_time" content="2018-12-01T01:39:30.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello,World!">
+<meta name="twitter:description" content="这里是一个菜鸡的博客。您的大驾光临真是令寒舍蓬荜生辉呀。">
 
 
 
@@ -139,7 +143,7 @@
   };
 </script>
 
-  <title>Hello,World! | Vege-Land</title>
+  <title>Hello,World! | Vege-Chick-Land</title>
   
 
 
@@ -197,7 +201,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Vege-Land</span>
+        <span class="site-title">Vege-Chick-Land</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -337,7 +341,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vege-Land">
+      <meta itemprop="name" content="Vege-Chick-Land">
     </span>
 
     
@@ -372,7 +376,7 @@
                 
               
 
-              <time title="创建时间：2018-12-01 08:33:57 / 修改时间：08:33:58" itemprop="dateCreated datePublished" datetime="2018-12-01T08:33:57+08:00">2018-12-01</time>
+              <time title="创建时间：2018-12-01 08:33:57 / 修改时间：09:39:30" itemprop="dateCreated datePublished" datetime="2018-12-01T08:33:57+08:00">2018-12-01</time>
             
 
             
@@ -431,7 +435,8 @@
       
 
       
-        
+        <p>这里是一个菜鸡的博客。您的大驾光临真是令寒舍蓬荜生辉呀。</p>
+
       
     </div>
 
@@ -459,6 +464,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客相关/" rel="tag"># 博客相关</a>
+          
+        </div>
       
 
       
@@ -880,7 +891,7 @@
         avatar:'retro',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1213,72 +1224,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
-                .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function () {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz",
-                'X-LC-Key': "ASAikR5dvxzat39AYxnQrQxD",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 

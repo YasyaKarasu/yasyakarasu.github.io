@@ -120,7 +120,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="[BZOJ 2151]种树 题解">
 <meta property="og:url" content="https://oycy0306.cf/2018/11/30/BZOJ-2151-种树-题解/index.html">
-<meta property="og:site_name" content="Vege-Land">
+<meta property="og:site_name" content="Vege-Chick-Land">
 <meta property="og:description" content="题面$Description$$A$城市有一个巨大的圆形广场，为了绿化环境和净化空气，市政府决定沿圆形广场外圈种一圈树。园林部门得到指令后，初步规划出$n$个种树的位置，顺时针编号$1$到$n$。并且每个位置都有一个美观度$A_i$，如果在这里种树就可以得到这$A_i$的美观度。但由于$A$城市土壤肥力欠佳，两棵树决不能种在相邻的位置（$i$号位置和$i+1$号位置叫相邻位置。值得注意的是$1$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-11-30T09:24:28.042Z">
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>[BZOJ 2151]种树 题解 | Vege-Land</title>
+  <title>[BZOJ 2151]种树 题解 | Vege-Chick-Land</title>
   
 
 
@@ -201,7 +201,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Vege-Land</span>
+        <span class="site-title">Vege-Chick-Land</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -341,7 +341,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vege-Land">
+      <meta itemprop="name" content="Vege-Chick-Land">
     </span>
 
     
@@ -1016,7 +1016,7 @@
         avatar:'retro',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1349,72 +1349,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
-                .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function () {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz",
-                'X-LC-Key': "ASAikR5dvxzat39AYxnQrQxD",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 

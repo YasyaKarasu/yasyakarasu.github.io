@@ -116,12 +116,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Vege-Land">
+<meta property="og:title" content="Vege-Chick-Land">
 <meta property="og:url" content="https://oycy0306.cf/archives/2018/11/index.html">
-<meta property="og:site_name" content="Vege-Land">
+<meta property="og:site_name" content="Vege-Chick-Land">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vege-Land">
+<meta name="twitter:title" content="Vege-Chick-Land">
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>归档 | Vege-Land</title>
+  <title>归档 | Vege-Chick-Land</title>
   
 
 
@@ -196,7 +196,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Vege-Land</span>
+        <span class="site-title">Vege-Chick-Land</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -773,7 +773,7 @@
         avatar:'retro',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1106,75 +1106,6 @@
 
 
   
-
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
-        .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz",
-                'X-LC-Key': "ASAikR5dvxzat39AYxnQrQxD",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
-          
-        })
-    });
-  </script>
-
-
 
   
 

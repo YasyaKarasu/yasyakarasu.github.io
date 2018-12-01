@@ -120,7 +120,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP2018初赛退役记">
 <meta property="og:url" content="https://oycy0306.cf/2018/10/26/NOIP2018初赛退役记/index.html">
-<meta property="og:site_name" content="Vege-Land">
+<meta property="og:site_name" content="Vege-Chick-Land">
 <meta property="og:description" content="怒发冲冠，凭栏处、潇潇雨歇。抬望眼、仰天长啸，壮怀激烈。   这次可算是真的凉透了。刚配好的博客可能暂时不太更了吧。 怎么说吧，这次初赛咕咕也确实有我的锅吧，自认为这几年的卷子都不是很难，都能做个八九十分，就没有很重视那些很难的题目，认为那是以前的风格，现在不会有了。谁知道这次就给我来了一个下马威，让我好好“爽”了一把。阿穿某可怜 然后还有就是我可能看到这么难的初赛题目有点紧张，然后前面先空了几">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/26/i6iueU.jpg">
@@ -145,7 +145,7 @@
   };
 </script>
 
-  <title>NOIP2018初赛退役记 | Vege-Land</title>
+  <title>NOIP2018初赛退役记 | Vege-Chick-Land</title>
   
 
 
@@ -203,7 +203,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Vege-Land</span>
+        <span class="site-title">Vege-Chick-Land</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -343,7 +343,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vege-Land">
+      <meta itemprop="name" content="Vege-Chick-Land">
     </span>
 
     
@@ -919,7 +919,7 @@
         avatar:'retro',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1252,72 +1252,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
-                .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function () {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "0FrsHM0BmAeRX2hJ0Ox7cRii-gzGzoHsz",
-                'X-LC-Key': "ASAikR5dvxzat39AYxnQrQxD",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 
