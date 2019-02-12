@@ -115,20 +115,20 @@
 
 
 
-  <meta name="description" content="0.模板题在此点击此处前往洛谷模板题（【模板】树链剖分） 1.处理的问题 将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$ 求一棵树从$x$节点到$y$节点的最短路径上每个节点的权值和 将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$ 求一棵树以$x​$节点为根的子树内的每个节点的权值和  2.相关概念 重儿子：对于每一个非叶子节点，它的儿子中，以某一节点为根的子树的节">
+  <meta name="description" content="0.模板题在此点击此处前往洛谷模板题（【模板】树链剖分） 1.处理的问题 将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$ 求一棵树从$x​$节点到$y​$节点的最短路径上每个节点的权值和 将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$ 求一棵树以$x​$节点为根的子树内的每个节点的权值和  2.相关概念 重儿子：对于每一个非叶子节点，它的儿子中，以某一节点为根的子树">
 <meta name="keywords" content="算法与题解,板子">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树链剖分详解">
 <meta property="og:url" content="https://oycy0306.cf/2019/02/12/树链剖分详解/index.html">
 <meta property="og:site_name" content="Vege-Chick-Land">
-<meta property="og:description" content="0.模板题在此点击此处前往洛谷模板题（【模板】树链剖分） 1.处理的问题 将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$ 求一棵树从$x$节点到$y$节点的最短路径上每个节点的权值和 将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$ 求一棵树以$x​$节点为根的子树内的每个节点的权值和  2.相关概念 重儿子：对于每一个非叶子节点，它的儿子中，以某一节点为根的子树的节">
+<meta property="og:description" content="0.模板题在此点击此处前往洛谷模板题（【模板】树链剖分） 1.处理的问题 将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$ 求一棵树从$x​$节点到$y​$节点的最短路径上每个节点的权值和 将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$ 求一棵树以$x​$节点为根的子树内的每个节点的权值和  2.相关概念 重儿子：对于每一个非叶子节点，它的儿子中，以某一节点为根的子树">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/02/12/kdXrmq.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/02/12/kdjBCD.png">
-<meta property="og:updated_time" content="2019-02-12T09:02:55.762Z">
+<meta property="og:updated_time" content="2019-02-12T09:06:51.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树链剖分详解">
-<meta name="twitter:description" content="0.模板题在此点击此处前往洛谷模板题（【模板】树链剖分） 1.处理的问题 将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$ 求一棵树从$x$节点到$y$节点的最短路径上每个节点的权值和 将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$ 求一棵树以$x​$节点为根的子树内的每个节点的权值和  2.相关概念 重儿子：对于每一个非叶子节点，它的儿子中，以某一节点为根的子树的节">
+<meta name="twitter:description" content="0.模板题在此点击此处前往洛谷模板题（【模板】树链剖分） 1.处理的问题 将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$ 求一棵树从$x​$节点到$y​$节点的最短路径上每个节点的权值和 将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$ 求一棵树以$x​$节点为根的子树内的每个节点的权值和  2.相关概念 重儿子：对于每一个非叶子节点，它的儿子中，以某一节点为根的子树">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/02/12/kdXrmq.png">
 
 
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-02-12 15:33:12 / 修改时间：17:02:55" itemprop="dateCreated datePublished" datetime="2019-02-12T15:33:12+08:00">2019-02-12</time>
+              <time title="创建时间：2019-02-12 15:33:12 / 修改时间：17:06:51" itemprop="dateCreated datePublished" datetime="2019-02-12T15:33:12+08:00">2019-02-12</time>
             
 
             
@@ -445,7 +445,7 @@
         <h1 id="0-模板题在此"><a href="#0-模板题在此" class="headerlink" title="0.模板题在此"></a>0.模板题在此</h1><p>点击<a href="https://www.luogu.org/problemnew/show/P3384" target="_blank" rel="noopener">此处</a>前往洛谷模板题（【模板】树链剖分）</p>
 <h1 id="1-处理的问题"><a href="#1-处理的问题" class="headerlink" title="1.处理的问题"></a>1.处理的问题</h1><ul>
 <li>将一棵树从$x$节点到$y$节点的最短路径上每个节点权值增加$v$</li>
-<li>求一棵树从$x$节点到$y$节点的最短路径上每个节点的权值和</li>
+<li>求一棵树从$x​$节点到$y​$节点的最短路径上每个节点的权值和</li>
 <li>将一棵树以$x$节点为根的子树内的每个节点权值增加$v​$</li>
 <li>求一棵树以$x​$节点为根的子树内的每个节点的权值和</li>
 </ul>
@@ -464,7 +464,7 @@
 <p>【以上非常抽象，接下来看图】</p>
 <p><img src="https://s2.ax1x.com/2019/02/12/kdXrmq.png" alt="图解"></p>
 <p>这样好理解多了吧（十分担忧哪里画错了，如果有请评论告诉我）</p>
-<h1 id="3-两个-dfs"><a href="#3-两个-dfs" class="headerlink" title="3.两个$dfs$"></a>3.两个$dfs$</h1><p><del>是两个$dfs$，不是一个$dfs$</del></p>
+<h1 id="3-两个-dfs"><a href="#3-两个-dfs" class="headerlink" title="3.两个$dfs$"></a>3.两个$dfs$</h1><p><del>是两个dfs​，不是一个dfs</del></p>
 <p>咳咳……这两个$dfs​$大概是树剖的精髓所在了吧。</p>
 <h2 id="dfs1"><a href="#dfs1" class="headerlink" title="$dfs1()$"></a>$dfs1()$</h2><p>这一个$dfs$要处理以下几件事情：</p>
 <ul>
