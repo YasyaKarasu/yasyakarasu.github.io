@@ -115,25 +115,25 @@
 
 
 
-  <meta name="description" content="题面$Description$$A$城市有一个巨大的圆形广场，为了绿化环境和净化空气，市政府决定沿圆形广场外圈种一圈树。园林部门得到指令后，初步规划出$n$个种树的位置，顺时针编号$1$到$n$。并且每个位置都有一个美观度$A_i$，如果在这里种树就可以得到这$A_i$的美观度。但由于$A$城市土壤肥力欠佳，两棵树决不能种在相邻的位置（$i$号位置和$i+1$号位置叫相邻位置。值得注意的是$1$">
-<meta name="keywords" content="算法与题解">
+  <meta name="description" content="心血来潮想新开一个板子标签，第一个想到的竟然是高精度？？？ 既然如此，我们就第一个放高精度呗╮(╯▽╰)╭ 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777">
+<meta name="keywords" content="板子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[BZOJ 2151]种树 题解">
-<meta property="og:url" content="https://oycy0306.cf/2018/11/30/BZOJ-2151-种树-题解/index.html">
+<meta property="og:title" content="【模板】高精度">
+<meta property="og:url" content="https://oycy0306.cf/2018/12/04/【模板】高精度/index.html">
 <meta property="og:site_name" content="Vege-Chick-Land">
-<meta property="og:description" content="题面$Description$$A$城市有一个巨大的圆形广场，为了绿化环境和净化空气，市政府决定沿圆形广场外圈种一圈树。园林部门得到指令后，初步规划出$n$个种树的位置，顺时针编号$1$到$n$。并且每个位置都有一个美观度$A_i$，如果在这里种树就可以得到这$A_i$的美观度。但由于$A$城市土壤肥力欠佳，两棵树决不能种在相邻的位置（$i$号位置和$i+1$号位置叫相邻位置。值得注意的是$1$">
+<meta property="og:description" content="心血来潮想新开一个板子标签，第一个想到的竟然是高精度？？？ 既然如此，我们就第一个放高精度呗╮(╯▽╰)╭ 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-30T09:24:28.042Z">
+<meta property="og:updated_time" content="2019-07-04T23:58:11.930Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[BZOJ 2151]种树 题解">
-<meta name="twitter:description" content="题面$Description$$A$城市有一个巨大的圆形广场，为了绿化环境和净化空气，市政府决定沿圆形广场外圈种一圈树。园林部门得到指令后，初步规划出$n$个种树的位置，顺时针编号$1$到$n$。并且每个位置都有一个美观度$A_i$，如果在这里种树就可以得到这$A_i$的美观度。但由于$A$城市土壤肥力欠佳，两棵树决不能种在相邻的位置（$i$号位置和$i+1$号位置叫相邻位置。值得注意的是$1$">
+<meta name="twitter:title" content="【模板】高精度">
+<meta name="twitter:description" content="心血来潮想新开一个板子标签，第一个想到的竟然是高精度？？？ 既然如此，我们就第一个放高精度呗╮(╯▽╰)╭ 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777">
 
 
 
 
 
 
-  <link rel="canonical" href="https://oycy0306.cf/2018/11/30/BZOJ-2151-种树-题解/">
+  <link rel="canonical" href="https://oycy0306.cf/2018/12/04/【模板】高精度/">
 
 
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>[BZOJ 2151]种树 题解 | Vege-Chick-Land</title>
+  <title>【模板】高精度 | Vege-Chick-Land</title>
   
 
 
@@ -336,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://oycy0306.cf/2018/11/30/BZOJ-2151-种树-题解/">
+    <link itemprop="mainEntityOfPage" href="https://oycy0306.cf/2018/12/04/【模板】高精度/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="oycy0306">
@@ -353,7 +353,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[BZOJ 2151]种树 题解
+          <h1 class="post-title" itemprop="name headline">【模板】高精度
               
             
           </h1>
@@ -380,12 +380,24 @@
                 
               
 
-              <time title="创建时间：2018-11-30 15:58:56 / 修改时间：17:24:28" itemprop="dateCreated datePublished" datetime="2018-11-30T15:58:56+08:00">2018-11-30</time>
+              <time title="创建时间：2018-12-04 23:16:10" itemprop="dateCreated datePublished" datetime="2018-12-04T23:16:10+08:00">2018-12-04</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-05 07:58:11" itemprop="dateModified" datetime="2019-07-05T07:58:11+08:00">2019-07-05</time>
               
             
           </span>
@@ -399,8 +411,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/30/BZOJ-2151-种树-题解/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/30/BZOJ-2151-种树-题解/" itemprop="commentCount"></span>
+                <a href="/2018/12/04/【模板】高精度/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/04/【模板】高精度/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -408,7 +420,7 @@
 
           
           
-             <span id="/2018/11/30/BZOJ-2151-种树-题解/" class="leancloud_visitors" data-flag-title="[BZOJ 2151]种树 题解">
+             <span id="/2018/12/04/【模板】高精度/" class="leancloud_visitors" data-flag-title="【模板】高精度">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -439,103 +451,9 @@
       
 
       
-        <hr>
-<h1 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h1><h2 id="Description"><a href="#Description" class="headerlink" title="$Description$"></a>$Description$</h2><p>$A$城市有一个巨大的圆形广场，为了绿化环境和净化空气，市政府决定沿圆形广场外圈种一圈树。园林部门得到指令后，初步规划出$n$个种树的位置，顺时针编号$1$到$n$。并且每个位置都有一个美观度$A_i$，如果在这里种树就可以得到这$A_i$的美观度。但由于$A$城市土壤肥力欠佳，两棵树决不能种在相邻的位置（$i$号位置和$i+1$号位置叫相邻位置。值得注意的是$1$号和$n$号也算相邻位置！）。最终市政府给园林部门提供了$m$棵树苗并要求全部种上，请你帮忙设计种树方案使得美观度总和最大。如果无法将$m$棵树苗全部种上，给出无解信息。</p>
-<h2 id="Input"><a href="#Input" class="headerlink" title="$Input$"></a>$Input$</h2><p>输入的第一行包含两个正整数n、m。第二行n个整数Ai。</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="$Output$"></a>$Output$</h2><p>输出一个整数，表示最佳植树方案可以得到的美观度。如果无解输出“Error!”，不包含引号。</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="$Sample Input$"></a>$Sample Input$</h2><p>【样例输入1】<br> 7 3<br> 1 2 3 4 5 6 7</p>
-<p>【样例输入2】<br> 7 4<br> 1 2 3 4 5 6 7</p>
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="$Sample Output$"></a>$Sample Output$</h2><p>【样例输出1】<br> 15</p>
-<p> 【样例输出2】<br> Error!</p>
-<h2 id="数据规模"><a href="#数据规模" class="headerlink" title="数据规模"></a>数据规模</h2><p> 对于全部数据：$m \le n ,-1000 \le A_i \le 1000$<br>$N$的大小对于不同数据有所不同：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">数据编号</th>
-<th>$N$的大小</th>
-<th>数据编号</th>
-<th>$N$的大小</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td>30</td>
-<td>11</td>
-<td>200</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td>35</td>
-<td>12</td>
-<td>2007</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td>40</td>
-<td>13</td>
-<td>2008</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td>45</td>
-<td>14</td>
-<td>2009</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td>50</td>
-<td>15</td>
-<td>2010</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td>55</td>
-<td>16</td>
-<td>2011</td>
-</tr>
-<tr>
-<td style="text-align:center">7</td>
-<td>60</td>
-<td>17</td>
-<td>2012</td>
-</tr>
-<tr>
-<td style="text-align:center">8</td>
-<td>65</td>
-<td>18</td>
-<td>199999</td>
-</tr>
-<tr>
-<td style="text-align:center">9</td>
-<td>200</td>
-<td>19</td>
-<td>199999</td>
-</tr>
-<tr>
-<td style="text-align:center">10</td>
-<td>200</td>
-<td>20</td>
-<td>200000</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>本人还是挺菜的，只能写菜鸡算法。正解还是参考了大佬的博客……</p>
-<p>首先，如果这道题目没有不能种植在相邻位置的限制，那么答案很显然，把$A_i$按照从大到小排序，取前$m$个数相加即可。</p>
-<p>现在题目有了这个限制，我们怎么考虑呢？</p>
-<p>首先，假设现在最大的$A_i$是$A_2$，那么我们先把$A_2$取出来，然后把$ans$加上$A_2$，这个时候$A_1$和$A_3$都是不能选了的，那么我们应该把他 <del>骟掉</del> 删掉。可是如果$A_1+A_3 \ge A_2$，你就出锅了。那么我们的解决措施是这样的。我们把$A_1$和$A_3$删掉以后加上一个$A_1+A_3-A_2$的新的美观度。这样，在选了$A_2$以后，如果剩下的里面最大的是$A_1+A_3-A_2$，那么加上这个以后，就等同于选了$A_1+A_3$而没有选择$A_2$。</p>
-<p>那么我们考虑这个新的美观度放在哪里。这个新权值的意义是选了$A_1$和$A_3$，也就是说，如果选到了这个，那么$A_n$和$A_4$就不能选了，所以我们把新权值放到$A_n$和$A_4$之间（注意这是一个环！不是4~n的区间，是这个区间的补集！）。用一个更容易理解的例子。如果新放进去的是$A_2+A_4-A_3$，那么显然不能选的是$A_1$和$A_5$，所以新的权值应该放到$A_1$和$A_5$之间。现在比较舒服的事情就是如果原来 <del>骟掉</del> 删掉的是$A_x$，那么我们把新的权值放到$A_x$的位置显然是可行的。这个问题就这么得解了！</p>
-<p>然后我们发现，我们这么一搞，就还剩下$N-1$个物品，我们要从中选$M-2$个物品。接下来我们继续像这样取$M-1$次就可以了。</p>
-<p>完结！撒花！<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。</p>
-<hr>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><p>把所有的$A$扔进一个大根堆（扔一个 ($A_i$,$i$) 的pair），同时用双向链表连接每个$A_i$。每次取出堆顶元素，设堆顶元素为($A_k$,$k$)，然后把$ans$加上$A_k$，在双向链表中把$A_k$的前驱和后继 <del>骟掉</del> 删掉，把$A_k$改成$A_{k-1}+A_{k+1}-A_k$，再扔到堆里。如此做$M$次。输出$ans$即可。</p>
-<hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="$Code$"></a>$Code$</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 200005</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,a[MAXN],ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> pre[MAXN],nxt[MAXN],vis[MAXN];</span><br><span class="line">priority_queue&lt; pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;,<span class="built_in">vector</span>&lt; pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; &gt;q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">getnum</span><span class="params">(<span class="keyword">int</span> &amp;num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	num=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> f=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(c))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (c==<span class="string">'-'</span>)</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		c=getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">isdigit</span>(c))</span><br><span class="line">	&#123;</span><br><span class="line">		num=(num&lt;&lt;<span class="number">3</span>)+(num&lt;&lt;<span class="number">1</span>)+(c&amp;<span class="number">15</span>);</span><br><span class="line">		c=getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	num*=f;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		pre[i]=i<span class="number">-1</span>,nxt[i]=i+<span class="number">1</span>;</span><br><span class="line">	pre[<span class="number">1</span>]=n;</span><br><span class="line">	nxt[n]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		q.push(make_pair(a[i],i));</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	vis[x]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> l=pre[x],r=nxt[x];</span><br><span class="line">	nxt[l]=r,pre[r]=l;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	getnum(n),getnum(m);</span><br><span class="line">	<span class="keyword">if</span> (m&gt;(n&gt;&gt;<span class="number">1</span>))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error!\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		getnum(a[i]);</span><br><span class="line">	init();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span> (vis[q.top().second])</span><br><span class="line">			q.pop();</span><br><span class="line">		<span class="keyword">register</span> <span class="keyword">int</span> tmp=q.top().second;</span><br><span class="line">		q.pop();</span><br><span class="line">		ans+=a[tmp];</span><br><span class="line">		a[tmp]=a[pre[tmp]]+a[nxt[tmp]]-a[tmp];</span><br><span class="line">		del(pre[tmp]);</span><br><span class="line">		del(nxt[tmp]);</span><br><span class="line">		q.push(make_pair(a[tmp],tmp));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>快读每次都打上负数吧……不会慢多少的。不要老是想着数据范围，有负数再打符号。凭我这愚蠢的大脑肯定是会忘记的……</p>
+        <p>心血来潮想新开一个板子标签，第一个想到的竟然是高精度？？？</p>
+<p>既然如此，我们就第一个放高精度呗╮(╯▽╰)╭</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br></pre></td><td class="code"><pre><span class="line">truct BigInteger</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> d[<span class="number">10005</span>];</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">clean</span><span class="params">()</span></span>&#123;<span class="keyword">while</span> (!d[len<span class="number">-1</span>]&amp;&amp;len&gt;<span class="number">1</span>) len--;<span class="keyword">return</span>;&#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger() &#123;<span class="built_in">memset</span>(d,<span class="number">0</span>,<span class="keyword">sizeof</span>(d));len=<span class="number">1</span>;<span class="keyword">return</span>;&#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger(<span class="keyword">int</span> num) &#123;*<span class="keyword">this</span>=num;<span class="keyword">return</span>;&#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger(<span class="keyword">char</span>* num) &#123;*<span class="keyword">this</span>=num;<span class="keyword">return</span>;&#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> =(<span class="keyword">char</span>* str)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(d,<span class="number">0</span>,<span class="keyword">sizeof</span>(d));</span><br><span class="line">        <span class="keyword">int</span> l=<span class="built_in">strlen</span>(str);</span><br><span class="line">        len=min(<span class="number">700</span>,l);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">isdigit</span>(str[len-i<span class="number">-1</span>]))</span><br><span class="line">                d[i]=str[len-i<span class="number">-1</span>]-<span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                d[i]=str[len-i<span class="number">-1</span>]-<span class="string">'A'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        clean();</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> =(<span class="built_in">string</span> str)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(d,<span class="number">0</span>,<span class="keyword">sizeof</span>(d));</span><br><span class="line">        <span class="keyword">int</span> l=str.length();</span><br><span class="line">        len=min(<span class="number">700</span>,l);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">isdigit</span>(str[len-i<span class="number">-1</span>]))</span><br><span class="line">                d[i]=str[len-i<span class="number">-1</span>]-<span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                d[i]=str[len-i<span class="number">-1</span>]-<span class="string">'A'</span>+<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        clean();</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> =(<span class="keyword">int</span> num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">char</span> c[<span class="number">10005</span>];</span><br><span class="line">        <span class="built_in">sprintf</span>(c,<span class="string">"%d"</span>,num);</span><br><span class="line">        *<span class="keyword">this</span>=c;</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> +(<span class="keyword">const</span> BigInteger&amp; b)</span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">        BigInteger c=*<span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;b.len;i++)</span><br><span class="line">        &#123;  </span><br><span class="line">            c.d[i]+=b.d[i];  </span><br><span class="line">            <span class="keyword">if</span> (c.d[i]&gt;<span class="number">10</span><span class="number">-1</span>) </span><br><span class="line">            &#123;</span><br><span class="line">            	c.d[i]%=<span class="number">10</span>;</span><br><span class="line">                c.d[i+<span class="number">1</span>]++;  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">while</span> (c.d[i]&gt;<span class="number">10</span><span class="number">-1</span>) </span><br><span class="line">        &#123;</span><br><span class="line">            c.d[i++]%=<span class="number">10</span>;</span><br><span class="line">            c.d[i]++;  </span><br><span class="line">        &#125;</span><br><span class="line">        c.len=max(len,b.len); </span><br><span class="line">        <span class="keyword">if</span> (c.d[i]&amp;&amp;c.len&lt;= i)</span><br><span class="line">            c.len++;</span><br><span class="line">        <span class="keyword">return</span> c;  </span><br><span class="line">    &#125;  </span><br><span class="line">    BigInteger <span class="keyword">operator</span> -(<span class="keyword">const</span> BigInteger&amp; b)</span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">        BigInteger c=*<span class="keyword">this</span>; </span><br><span class="line">        <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;b.len;i++)</span><br><span class="line">        &#123;  </span><br><span class="line">            c.d[i]-=b.d[i];  </span><br><span class="line">            <span class="keyword">if</span> (c.d[i]&lt;<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                c.d[i]+=<span class="number">10</span>;</span><br><span class="line">                c.d[i+<span class="number">1</span>]--; </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">while</span> (c.d[i]&lt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            c.d[i++]+=<span class="number">10</span>;</span><br><span class="line">            c.d[i]--; </span><br><span class="line">        &#125;  </span><br><span class="line">        c.clean();  </span><br><span class="line">        <span class="keyword">return</span> c;  </span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> *(<span class="keyword">const</span> BigInteger&amp; b)<span class="keyword">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        BigInteger c;</span><br><span class="line">        c.len=min(<span class="number">1010</span>,len+b.len);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;b.len;i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">0</span>;j&lt;len;j++)</span><br><span class="line">                c.d[i+j]+=d[j]*b.d[i];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;c.len<span class="number">-1</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            c.d[i+<span class="number">1</span>]+=c.d[i]/<span class="number">10</span>;</span><br><span class="line">            c.d[i]%=<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        c.clean();</span><br><span class="line">        <span class="keyword">return</span> c; </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> /(<span class="keyword">const</span> BigInteger&amp; b)</span><br><span class="line">    &#123;  </span><br><span class="line">        BigInteger c=*<span class="keyword">this</span>,a=<span class="number">0</span>;  </span><br><span class="line">        <span class="keyword">register</span> <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=len<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)  </span><br><span class="line">        &#123;  </span><br><span class="line">            a=a*<span class="number">10</span>+d[i];  </span><br><span class="line">            <span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;<span class="number">10</span>;j++) </span><br><span class="line">                <span class="keyword">if</span> (a&lt;b*(j+<span class="number">1</span>)) <span class="keyword">break</span>;  </span><br><span class="line">            c.d[i]=j;  </span><br><span class="line">            a=a-b*j;  </span><br><span class="line">        &#125;  </span><br><span class="line">        c.clean();  </span><br><span class="line">        <span class="keyword">return</span> c;  </span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> %(<span class="keyword">const</span> BigInteger&amp; b)</span><br><span class="line">    &#123;  </span><br><span class="line">        BigInteger a=<span class="number">0</span>;  </span><br><span class="line">        <span class="keyword">register</span> <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=len<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)  </span><br><span class="line">        &#123;  </span><br><span class="line">            a=a*<span class="number">10</span>+d[i];  </span><br><span class="line">            <span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;<span class="number">10</span>;j++) </span><br><span class="line">                <span class="keyword">if</span> (a&lt;b*(j+<span class="number">1</span>))</span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            a=a-b*j;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> a;  </span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> +=(<span class="keyword">const</span> BigInteger &amp;b)</span><br><span class="line">    &#123;</span><br><span class="line">    	*<span class="keyword">this</span>=*<span class="keyword">this</span>+b;</span><br><span class="line">    	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> -=(<span class="keyword">const</span> BigInteger &amp;b)</span><br><span class="line">    &#123;</span><br><span class="line">    	*<span class="keyword">this</span>=*<span class="keyword">this</span>-b;</span><br><span class="line">    	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> *=(<span class="keyword">const</span> BigInteger &amp;b)</span><br><span class="line">    &#123;</span><br><span class="line">    	*<span class="keyword">this</span>=*<span class="keyword">this</span>*b;</span><br><span class="line">    	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> /=(<span class="keyword">const</span> BigInteger &amp;b)</span><br><span class="line">    &#123;</span><br><span class="line">    	*<span class="keyword">this</span>=*<span class="keyword">this</span>/b;</span><br><span class="line">    	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BigInteger <span class="keyword">operator</span> %=(<span class="keyword">const</span> BigInteger &amp;b)</span><br><span class="line">    &#123;</span><br><span class="line">    	*<span class="keyword">this</span>=*<span class="keyword">this</span>%b;</span><br><span class="line">    	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> BigInteger&amp; b) <span class="keyword">const</span></span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span>(len!=b.len) </span><br><span class="line">            <span class="keyword">return</span> len&lt;b.len;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=len<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)  </span><br><span class="line">            <span class="keyword">if</span>(d[i]!=b.d[i]) </span><br><span class="line">                <span class="keyword">return</span> d[i]&lt;b.d[i];  </span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &gt;(<span class="keyword">const</span> BigInteger&amp; b) <span class="keyword">const</span>&#123;<span class="keyword">return</span> b&lt;*<span class="keyword">this</span>;&#125;  </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;=(<span class="keyword">const</span> BigInteger&amp; b) <span class="keyword">const</span>&#123;<span class="keyword">return</span> !(b&lt;*<span class="keyword">this</span>);&#125; </span><br><span class="line">     </span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span>&gt;=(<span class="keyword">const</span> BigInteger&amp; b) <span class="keyword">const</span>&#123;<span class="keyword">return</span> !(*<span class="keyword">this</span>&lt;b);&#125;  </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span>!=(<span class="keyword">const</span> BigInteger&amp; b) <span class="keyword">const</span>&#123;<span class="keyword">return</span> b&lt;*<span class="keyword">this</span>||*<span class="keyword">this</span>&lt;b;&#125;  </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> BigInteger&amp; b) <span class="keyword">const</span>&#123;<span class="keyword">return</span> !(b&lt;*<span class="keyword">this</span>)&amp;&amp;!(b&gt;*<span class="keyword">this</span>);&#125;  </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="built_in">string</span> <span class="title">str</span><span class="params">()</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">char</span> s[<span class="number">10005</span>]=&#123;&#125;;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">    		s[len-i<span class="number">-1</span>]=d[i]+<span class="string">'0'</span>;</span><br><span class="line">    	<span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -567,7 +485,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法与题解/" rel="tag"># 算法与题解</a>
+            <a href="/tags/板子/" rel="tag"># 板子</a>
           
         </div>
       
@@ -580,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/27/新东方四级词汇联想记忆法乱序版/" rel="next" title="新东方四级词汇联想记忆法乱序版">
-                <i class="fa fa-chevron-left"></i> 新东方四级词汇联想记忆法乱序版
+              <a href="/2018/12/01/hexo博客博文加密功能/" rel="next" title="hexo博客博文加密功能">
+                <i class="fa fa-chevron-left"></i> hexo博客博文加密功能
               </a>
             
           </div>
@@ -590,8 +508,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/01/Hello-World/" rel="prev" title="Hello,World!">
-                Hello,World! <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/30/TF-Boys出道纪念/" rel="prev" title="TF Boys出道纪念">
+                TF Boys出道纪念 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -640,17 +558,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -802,22 +711,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.1.</span> <span class="nav-text">$Description$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">1.2.</span> <span class="nav-text">$Input$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">1.3.</span> <span class="nav-text">$Output$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.4.</span> <span class="nav-text">$Sample Input$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.5.</span> <span class="nav-text">$Sample Output$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据规模"><span class="nav-number">1.6.</span> <span class="nav-text">数据规模</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">3.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">4.</span> <span class="nav-text">$Code$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注意点"><span class="nav-number">5.</span> <span class="nav-text">注意点</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
