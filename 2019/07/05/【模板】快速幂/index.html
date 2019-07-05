@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="很简单 举个例子，算$a^{11}$ $11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}a^{2^1}a^{2^3}$。 于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$ 那么这个$a$的二的次幂怎么处理？ 我们用一个很简单的办法。做$1011$的每一位时都让">
+  <meta name="description" content="很简单 举个例子，算$a^{11}$ $11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}a^{2^1}a^{2^3}$ 于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$ 那么这个$a$的二的次幂怎么处理？ 我们用一个很简单的办法。做$1011$的每一位时都让$">
 <meta name="keywords" content="板子">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【模板】快速幂">
 <meta property="og:url" content="https://oycy0306.cf/2019/07/05/【模板】快速幂/index.html">
 <meta property="og:site_name" content="Vege-Chick-Land">
-<meta property="og:description" content="很简单 举个例子，算$a^{11}$ $11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}a^{2^1}a^{2^3}$。 于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$ 那么这个$a$的二的次幂怎么处理？ 我们用一个很简单的办法。做$1011$的每一位时都让">
+<meta property="og:description" content="很简单 举个例子，算$a^{11}$ $11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}a^{2^1}a^{2^3}$ 于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$ 那么这个$a$的二的次幂怎么处理？ 我们用一个很简单的办法。做$1011$的每一位时都让$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-05T00:10:39.653Z">
+<meta property="og:updated_time" content="2019-07-05T00:14:33.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【模板】快速幂">
-<meta name="twitter:description" content="很简单 举个例子，算$a^{11}$ $11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}a^{2^1}a^{2^3}$。 于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$ 那么这个$a$的二的次幂怎么处理？ 我们用一个很简单的办法。做$1011$的每一位时都让">
+<meta name="twitter:description" content="很简单 举个例子，算$a^{11}$ $11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}a^{2^1}a^{2^3}$ 于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$ 那么这个$a$的二的次幂怎么处理？ 我们用一个很简单的办法。做$1011$的每一位时都让$">
 
 
 
@@ -380,7 +380,7 @@
                 
               
 
-              <time title="创建时间：2019-07-05 07:58:34 / 修改时间：08:10:39" itemprop="dateCreated datePublished" datetime="2019-07-05T07:58:34+08:00">2019-07-05</time>
+              <time title="创建时间：2019-07-05 07:58:34 / 修改时间：08:14:33" itemprop="dateCreated datePublished" datetime="2019-07-05T07:58:34+08:00">2019-07-05</time>
             
 
             
@@ -441,10 +441,10 @@
       
         <p>很简单</p>
 <p>举个例子，算$a^{11}$</p>
-<p>$11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}<em>a^{2^1}</em>a^{2^3}$。</p>
+<p>$11$转化为$2$进制是$1011$，所以我们可以把$a^{11}$转化为$a^{2^0+2^1+2^3}$，即$a^{2^0}<em>a^{2^1}</em>a^{2^3}$</p>
 <p>于是从右往左处理$1011$的每一位（设这是第$i$位），如果是$1$就给结果乘上$a^{2^{i-1}}$</p>
 <p>那么这个$a$的二的次幂怎么处理？</p>
-<p>我们用一个很简单的办法。做$1011$的每一位时都让$a$自乘，然后你会发现在第$i$位时$a$变成了$a^{2^{i-1}}$，就很好</p>
+<p>我们用一个很简单的办法。做$1011$的每一位时都让$a$自乘，然后你会发现在第$i$位时$a$变成了$a^{2^{i-1}}​$，就很好</p>
 <p>上代码</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">LL b,p,k;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">ksm</span><span class="params">(LL base,LL po,LL modnum)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> LL res=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (po)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (po&amp;<span class="number">1</span>)</span><br><span class="line">			res=res*base%modnum;</span><br><span class="line">		base=base*base%modnum;</span><br><span class="line">		po&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res%modnum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;b,&amp;p,&amp;k);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld^%lld mod %lld=%lld\n"</span>,b,p,k,ksm(b,p,k));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
