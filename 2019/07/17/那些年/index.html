@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="console.error(&quot;Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=true&quot;); 			 &amp;gt;&amp;gt;  调试到初始化之前 VC上要复杂一些 做课设写报告度过每天 手工的测试数据 深搜出的无解 代码带我回当年那个十一月 调试到初始化之前 麻木地看着头文件 傻傻运行到红色的断点 模拟也">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-zuhElefv&quot;),             narrow: false,             autoplay: true,">
 <meta name="keywords" content="分享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="那些年">
 <meta property="og:url" content="https://oycy0306.cf/2019/07/17/那些年/index.html">
 <meta property="og:site_name" content="Vege-Chick-Land">
-<meta property="og:description" content="console.error(&quot;Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=true&quot;); 			 &amp;gt;&amp;gt;  调试到初始化之前 VC上要复杂一些 做课设写报告度过每天 手工的测试数据 深搜出的无解 代码带我回当年那个十一月 调试到初始化之前 麻木地看着头文件 傻傻运行到红色的断点 模拟也">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-zuhElefv&quot;),             narrow: false,             autoplay: true,">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-17T12:23:47.706Z">
+<meta property="og:updated_time" content="2019-07-17T12:29:04.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="那些年">
-<meta name="twitter:description" content="console.error(&quot;Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=true&quot;); 			 &amp;gt;&amp;gt;  调试到初始化之前 VC上要复杂一些 做课设写报告度过每天 手工的测试数据 深搜出的无解 代码带我回当年那个十一月 调试到初始化之前 麻木地看着头文件 傻傻运行到红色的断点 模拟也">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-zuhElefv&quot;),             narrow: false,             autoplay: true,">
 
 
 
@@ -181,6 +181,8 @@
   </style>
 </noscript>
 
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -380,7 +382,7 @@
                 
               
 
-              <time title="创建时间：2019-07-17 20:20:47 / 修改时间：20:23:47" itemprop="dateCreated datePublished" datetime="2019-07-17T20:20:47+08:00">2019-07-17</time>
+              <time title="创建时间：2019-07-17 20:20:47 / 修改时间：20:29:04" itemprop="dateCreated datePublished" datetime="2019-07-17T20:20:47+08:00">2019-07-17</time>
             
 
             
@@ -440,10 +442,26 @@
 
       
         
-			<script>
-				console.error("Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=true");
-			</script>
-<p>&gt;<br>&gt;</p>
+        <div id="aplayer-zuhElefv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-zuhElefv"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "那些年",
+              author: "胡夏",
+              url: "那些年.mp3",
+              pic: "/2019/07/17/那些年/那些年.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
 <blockquote>
 <p>调试到初始化之前</p>
 <p>VC上要复杂一些</p>
