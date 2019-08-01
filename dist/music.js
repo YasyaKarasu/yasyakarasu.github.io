@@ -53,12 +53,6 @@ const ap = new APlayer({
         artist: 'Taylor Swift',
         url: 'http://www.ytmp3.cn/down/51501.mp3',
         cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000003XgDKL12X3J1.jpg',
-      },
-	  {
-        name: 'アイロニ (反语) (カバー)',
-        artist: 'majiko (まじ娘)',
-        url: 'http://www.ytmp3.cn/down/60271.mp3',
-        cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000002FzKSY0FcypL.jpg',
       }
     ]
 });
