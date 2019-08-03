@@ -16,7 +16,7 @@ const ap = new APlayer({
         name: 'Gorgeous',
         artist: 'Taylor Swift',
         url: 'http://www.ytmp3.cn/down/49722.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/11.jpg',
+        cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000003OK4yP2MBOip.jpg',
       },
 	  {
         name: 'オレンジ (Orange)',
