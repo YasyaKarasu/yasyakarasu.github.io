@@ -53,6 +53,12 @@ const ap = new APlayer({
         artist: 'Taylor Swift',
         url: 'http://www.ytmp3.cn/down/51501.mp3',
         cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000003XgDKL12X3J1.jpg',
+      },
+	  {
+        name: '打上花火',
+        artist: 'DAOKO (ダヲコ),米津玄師 (よねづ けんし)',
+        url: 'http://www.ytmp3.cn/down/50434.mp3',
+        cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000004HjUxU1o3HXf.jpg',
       }
     ]
 });
