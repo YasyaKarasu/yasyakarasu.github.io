@@ -61,9 +61,9 @@ const ap = new APlayer({
         cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000004HjUxU1o3HXf.jpg',
       },
 	  {
-        name: 'Despacito',
-        artist: 'Luis Fonsi,Daddy Yankee',
-        url: 'http://www.ytmp3.cn/down/37445.mp3',
+        name: 'Despacito (Remix)',
+        artist: 'Luis Fonsi,Daddy Yankee,Justin Bieber',
+        url: 'http://www.ytmp3.cn/down/49984.mp3',
         cover: 'http://y.gtimg.cn/music/photo_new/T002R800x800M000001pX1fw1eGdRh.jpg',
       }
     ]
