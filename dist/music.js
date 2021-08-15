@@ -79,7 +79,7 @@ const ap = new APlayer({
         name: 'Prologue',
         artist: 'YOASOBI',
         url: 'https://www.ytmp3.cn/down/75504.mp3',
-        cover: 'https://img3.kuwo.cn/star/albumcover/500/53/10/423466712.jpg',
+        cover: 'https://img2.kuwo.cn/star/albumcover/500/57/79/436785350.jpg',
       },
       {
         name: 'Epilogue',
