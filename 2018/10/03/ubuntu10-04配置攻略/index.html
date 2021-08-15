@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/vege-chick.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/vege-chick.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="每次装ubuntu都要重新到百度上找一堆东西……麻烦死了……既然这次弄了个新的好看的博客，那就让它发挥一点作用吧！ 软件源更改打开应用商店，左上角点击ubuntu软件，出现的菜单中选择“软件和更新”，然后更改一下“下载自”右边的软件源即可！ 推荐（假的）： http://mirrors.tuna.tsinghua.edu.cn/ubuntuhttp://mirrors.cn99.com/ubunt">
+<meta name="keywords" content="ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu18.04配置攻略">
+<meta property="og:url" content="https://oycy0306.cf/2018/10/03/ubuntu10-04配置攻略/index.html">
+<meta property="og:site_name" content="Vege-Chick-Land">
+<meta property="og:description" content="每次装ubuntu都要重新到百度上找一堆东西……麻烦死了……既然这次弄了个新的好看的博客，那就让它发挥一点作用吧！ 软件源更改打开应用商店，左上角点击ubuntu软件，出现的菜单中选择“软件和更新”，然后更改一下“下载自”右边的软件源即可！ 推荐（假的）： http://mirrors.tuna.tsinghua.edu.cn/ubuntuhttp://mirrors.cn99.com/ubunt">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/03/i3cTeI.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/10/03/i3cLY8.jpg">
+<meta property="og:updated_time" content="2018-11-08T07:18:09.946Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu18.04配置攻略">
+<meta name="twitter:description" content="每次装ubuntu都要重新到百度上找一堆东西……麻烦死了……既然这次弄了个新的好看的博客，那就让它发挥一点作用吧！ 软件源更改打开应用商店，左上角点击ubuntu软件，出现的菜单中选择“软件和更新”，然后更改一下“下载自”右边的软件源即可！ 推荐（假的）： http://mirrors.tuna.tsinghua.edu.cn/ubuntuhttp://mirrors.cn99.com/ubunt">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/10/03/i3cTeI.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://oycy0306.cf/2018/10/03/ubuntu10-04配置攻略/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>ubuntu18.04配置攻略 | Vege-Chick-Land</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<!--��Ƶ-->
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Vege-Chick-Land</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">I'm true vegetable!</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-云盘">
+    <a href="/NetDisc/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-cloud"></i> <br>云盘</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-bzojch">
+    <a href="/BZOJCH/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> <br>BZOJCH</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://oycy0306.cf/2018/10/03/ubuntu10-04配置攻略/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="oycy0306">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hito.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vege-Chick-Land">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ubuntu18.04配置攻略
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-03 08:54:03" itemprop="dateCreated datePublished" datetime="2018-10-03T08:54:03+08:00">2018-10-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-08 15:18:09" itemprop="dateModified" datetime="2018-11-08T15:18:09+08:00">2018-11-08</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/03/ubuntu10-04配置攻略/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/10/03/ubuntu10-04配置攻略/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/10/03/ubuntu10-04配置攻略/" class="leancloud_visitors" data-flag-title="ubuntu18.04配置攻略">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>每次装ubuntu都要重新到百度上找一堆东西……麻烦死了……既然这次弄了个新的好看的博客，那就让它发挥一点作用吧！</p>
+<h1 id="软件源更改"><a href="#软件源更改" class="headerlink" title="软件源更改"></a>软件源更改</h1><p>打开应用商店，左上角点击ubuntu软件，出现的菜单中选择“软件和更新”，然后更改一下“下载自”右边的软件源即可！</p>
+<h2 id="推荐（假的）："><a href="#推荐（假的）：" class="headerlink" title="推荐（假的）："></a>推荐（假的）：</h2><blockquote>
+<p><a href="http://mirrors.tuna.tsinghua.edu.cn/ubuntu" target="_blank" rel="noopener">http://mirrors.tuna.tsinghua.edu.cn/ubuntu</a><br><a href="http://mirrors.cn99.com/ubuntu" target="_blank" rel="noopener">http://mirrors.cn99.com/ubuntu</a></p>
+</blockquote>
+<h1 id="安装Chrome"><a href="#安装Chrome" class="headerlink" title="安装Chrome"></a>安装Chrome</h1><p>打开终端，然后sudo su一下好了，方便一点。如果你这里不sudo su的话，那么接下来的4条命令都要加sudo。</p>
+<p>输入以下命令：</p>
+<blockquote>
+<p>wget <a href="http://www.linuxidc.com/files/repo/google-chrome.list" target="_blank" rel="noopener">http://www.linuxidc.com/files/repo/google-chrome.list</a> -P /etc/apt/sources.list.d/<br>wget -q -O - <a href="https://dl.google.com/linux/linux_signing_key.pub" target="_blank" rel="noopener">https://dl.google.com/linux/linux_signing_key.pub</a>  | sudo apt-key add -<br>apt-get update<br>apt-get install google-chrome-stable</p>
+</blockquote>
+<p>然后在左下角的显示应用程序里面打开全部，就可以看到Chrome已经躺在里面了！</p>
+<h1 id="安装Sublime-Text-3"><a href="#安装Sublime-Text-3" class="headerlink" title="安装Sublime Text 3"></a>安装Sublime Text 3</h1><p>其实在ubuntu下也可以选择使用Atom，我以前也一直是使用Atom的，但Atom有一个问题就是它的启动速度实在是慢，加上我原来实在虚拟机上面跑Ubuntu的，会导致开一个Atom需要耗费大量的时间。于是我就转投靠了Sublime Text。这玩意儿确实非常非常的轻量级，启动速度飞快，而且功能也很不错。那么Ubuntu 18.04安装SublimeText 3其实非常简单，直接到应用商店搜索Sublime Text就有了。当然官网也是可以下载的。那我还是放一个官网网址吧（虽然不太会这么下载）。</p>
+<p> <a href="https://www.sublimetext.com/3" target="_blank" rel="noopener">sublime text 3官网</a></p>
+<p>然后其实Sublime Text的重点还是配置它吧。Ubuntu的配置和Windows的配置还是有一定的不同的。首先呢我们应该安装g++对吧。反正我这次是这么装的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br></pre></td></tr></table></figure>
+<p>不过好像这样也可以：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install g++</span><br></pre></td></tr></table></figure>
+<p>但刚才我又百度了一下，貌似应该这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install aptitude</span><br><span class="line">sudo aptitude install g++</span><br></pre></td></tr></table></figure>
+<p>我引用一下作者的原话啊（侵删）</p>
+<blockquote>
+<p>终端中输入后会提示aptitude给出的解决方案，你可以选择no,会继续提供下一个解决方案，一般前面的方案会是忽略掉依赖冲突，所以想要彻底解决的话可以跳过前面的几种方案，然后再yes解决。（当然这里的话，自己可以看提示选择需要的处理方案）</p>
+</blockquote>
+<p>然后在终端里输入g++ -v，如果出现版本信息那么就是正常安装了</p>
+<p>然后呢，打开sublime text 3，在顶部的菜单栏中选择Tools-&gt;Build System-&gt;New Build System，在打开的文件中把自动添加的内容<del>骟掉</del>删掉，换成以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;shell_cmd&quot;: &quot;g++ \&quot;$&#123;file&#125;\&quot; -o \&quot;$&#123;file_path&#125;/$&#123;file_base_name&#125;\&quot; -Wall&quot;,</span><br><span class="line">    &quot;file_regex&quot;: &quot;^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$&quot;,</span><br><span class="line">    &quot;working_dir&quot;: &quot;$&#123;file_path&#125;&quot;,</span><br><span class="line">    &quot;selector&quot;: &quot;source.c, source.c++&quot;,</span><br><span class="line">    &quot;variants&quot;:</span><br><span class="line">    [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;run&quot;,</span><br><span class="line">            &quot;shell_cmd&quot;: &quot;g++ \&quot;$&#123;file&#125;\&quot; -o \&quot;/tmp/$&#123;file_base_name&#125;\&quot; -Wall &amp;&amp; gnome-terminal -- bash -c \&quot;\&quot;&apos;/tmp/$&#123;file_base_name&#125;&apos;\&quot; &amp;&amp; read &amp;&amp; rm \&quot;&apos;/tmp/$&#123;file_base_name&#125;&apos;\&quot;\&quot;&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;debug&quot;,</span><br><span class="line">            &quot;shell_cmd&quot;: &quot;g++ \&quot;$&#123;file&#125;\&quot; -o \&quot;/tmp/$&#123;file_base_name&#125;\&quot; -g -Wall &amp;&amp; gnome-terminal -- bash -c \&quot;gdb \&quot;&apos;/tmp/$&#123;file_base_name&#125;&apos;\&quot; &amp;&amp; rm \&quot;&apos;/tmp/$&#123;file_base_name&#125;&apos;\&quot;\&quot;&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后Ctrl+S保存一下，就命名为C++就可以了，当然你自己想搞得狂暴酷炫吊炸天一点也行，但最好别叫C++ Single File。嗯，这不是一个正常人应该取的名字对吧~~~///(^v^)\\\~~~<br>接下来在菜单栏中的Tools-&gt;Build Syetem中选择你刚才保存的那一个Build System即可。现在你可以通过Ctrl+B来选择你的编译选项。<br>接下来我们来设置一下快捷键。在菜单栏中打开Preferences-&gt;Key Bindings，在打开的文件的右侧中加入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">	&#123;&quot;keys&quot;: [&quot;f5&quot;], &quot;command&quot;: &quot;build&quot;,</span><br><span class="line">		&quot;args&quot;: &#123;</span><br><span class="line">		&quot;variant&quot;: &quot;run&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line"> 	&#123;&quot;keys&quot;: [&quot;f6&quot;], &quot;command&quot;: &quot;build&quot;,</span><br><span class="line"> 		&quot;args&quot;: &#123;</span><br><span class="line"> 		&quot;variant&quot;: &quot;debug&quot;</span><br><span class="line"> 		&#125;</span><br><span class="line"> 	&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>这段代码的这些地方可以供你修改自定义：</p>
+<blockquote>
+<p>f5 ：这个你可以改成自己熟悉的编译运行快捷键<br>f6 ：这个你可以改成自己熟悉的debug快捷键<br>run ：这个你必须改成自己刚才写的Build System中的第一条编译命令的”name”<br>debug ：这个你必须改成自己刚才写的Build Syetem中的第二条编译命令的”name”</p>
+</blockquote>
+<p>差不多就这么多吧。当然如果<del>你</del>您比较巨，可以自己写这些东西，格式大概就是上面这样！</p>
+<h1 id="安装好看的主题！"><a href="#安装好看的主题！" class="headerlink" title="安装好看的主题！"></a>安装好看的主题！</h1><p>引用一下我以前百度的时候看到的一句话：“不美翻怎么搞开发！”这说得十分有道理啊！说句老实话，ubuntu默认的主题还是挺丑的不是么(￣_￣|||)</p>
+<p>那么我推荐两个主题！</p>
+<p>等等等等！先别着急！再更换主题之前，我们得先安装gnome-tweak-tools才能更换主题！</p>
+<p>那么怎么安装gnome-tweak-tools呢？</p>
+<p>貌似直接这样就可以了(￣_￣|||)</p>
+<blockquote>
+<p>sudo apt-get install gnome-tweak-tool</p>
+</blockquote>
+<p>好吧那就过去了！</p>
+<p>接下来要正经地推荐主题了！</p>
+<h2 id="1-Numix"><a href="#1-Numix" class="headerlink" title="1.Numix"></a>1.Numix</h2><blockquote>
+<p>Numix是ubuntu下一款很好看的扁平化主题</p>
+</blockquote>
+<p>好像我曾经百度Numix安装的时候经常看到这么一句话。当然，Numix也确实是好看。（我还是从rxz巨魔那里看到的这个主题）<br>（顺便给OIER们安利rxz巨魔的blog！（虽然各位OIER应该已经有了）<a href="https://ruanx.pw" target="_blank" rel="noopener">rxz巨魔的博客</a>，当然rxz巨爷的一个很大的贡献就是BZOJ离线题库！大家可以戳<a href="https://ruanx.pw/bzojch/" target="_blank" rel="noopener">这里</a>来访问，左侧的“关于”里面有下载离线BZOJ的途径）</p>
+<p>安装方法如下！</p>
+<p>打开终端！输入如下命令！（还是可以先 sudo su，这样后面就不在需要输入sudo了）</p>
+<blockquote>
+<p>sudo add-apt-repository ppa:numix/ppa<br>sudo apt-get update<br>sudo apt-get install numix-gtk-theme numix-icon-theme-circle</p>
+</blockquote>
+<p>然后打开gnome-tweak-tools，里面可以更换图标，和应用程序的主题。看自己喜好选择喽~</p>
+<p>对了，本人使用这个主题比较喜欢配这张壁纸<br><img src="https://s1.ax1x.com/2018/10/03/i3cTeI.jpg" alt="好看的渐变色壁纸，搭配扁平化的Numix非常完美"><br>想要的可以拿走不谢【doge】</p>
+<h2 id="2-高仿Mac-Os主题"><a href="#2-高仿Mac-Os主题" class="headerlink" title="2.高仿Mac-Os主题"></a>2.高仿Mac-Os主题</h2><p>这个主题是我经过<strong>很长很长很长很长</strong>的时间才自己东拼西凑凑出来的一套主题，配起来十分的复杂，我们先放一下吧(￣_￣|||)暂时没有机子给我操作。<br>这里暂时先放一个和我的主题基本相同的（当年我主要是参考这个设置的）<a href="https://blog.csdn.net/jasonzhoujx/article/details/80400245" target="_blank" rel="noopener">博客</a>（侵删）。<br>嗯，我当年参考的也有可能是<a href="https://www.cnblogs.com/lishanlei/p/9090404.html" target="_blank" rel="noopener">这个</a>（侵删）。<br>另外这里放上我的高仿Mac-Os主题的壁纸<br><img src="https://s1.ax1x.com/2018/10/03/i3cLY8.jpg" alt="OS X EL Capitan wallpaper"><br>简直完美！</p>
+<h1 id="安装QQ、TIM、迅雷、百度云等windows应用（高阶玩法）"><a href="#安装QQ、TIM、迅雷、百度云等windows应用（高阶玩法）" class="headerlink" title="安装QQ、TIM、迅雷、百度云等windows应用（高阶玩法）"></a>安装QQ、TIM、迅雷、百度云等windows应用（高阶玩法）</h1><p>一上来就先放一个<a href="https://www.bilibili.com/video/av25384610?from=search&amp;seid=7401064824884005244" target="_blank" rel="noopener">B站的视频网址</a></p>
+<p>当然也可以来这里看<a href="https://oycy0306.cf/2018/10/03/ubuntu%E5%AE%89%E8%A3%85QQ-TIM%E7%AD%89windows%E5%BA%94%E7%94%A8/">我写的博客</a><del>（其实还是搬运）</del></p>
+<p>就是它，详细地介绍了如何安装这些windows应用</p>
+<h1 id="尾声（怎么这么别扭）"><a href="#尾声（怎么这么别扭）" class="headerlink" title="尾声（怎么这么别扭）"></a>尾声（怎么这么别扭）</h1><p>本人才识浅短，暂时只能写这么一点点，而且里面可能有成千上万的错误(￣_￣|||)不过还是希望读者能多多支持吧。另外如果看出来了这篇博客中的问题，还请评论中告诉我或者发邮件给我！我的邮箱在左侧有的！</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+	
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束,感谢阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/03/ubuntu安装QQ-TIM等windows应用/" rel="prev" title="ubuntu安装QQ,TIM等windows应用">
+                ubuntu安装QQ,TIM等windows应用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/hito.jpg" alt="oycy0306">
+            
+              <p class="site-author-name" itemprop="name">oycy0306</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/oycy0306" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:oycy0306@hotmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=592043693&website=www.oicqzone.com" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i></a>
+                  
+                </span>
+              
+            </div>
+          
+		  <object type="application/x-shockwave-flash" style="outline:none;" data="http://cdn.abowman.com/widgets/discdrop/discDrop.swf?" width="210" height="215"><param name="movie" value="http://cdn.abowman.com/widgets/discdrop/discDrop.swf?"><param name="AllowScriptAccess" value="always"><param name="wmode" value="opaque"><param name="bgcolor" value="FFFFFF"></object>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://darkleafin.cf" title="darkleafin" target="_blank">darkleafin</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zijunhz.github.io" title="zijunhz" target="_blank">zijunhz</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://vsh-fd.github.io/" title="Vishford" target="_blank">Vishford</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xianyu626.github.io/" title="北咸冥鱼" target="_blank">北咸冥鱼</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zqlwmatt.xyz/" title="ZqlwMatt" target="_blank">ZqlwMatt</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.karriganasta.xyz/" title="karriganasta" target="_blank">karriganasta</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://high-cold.github.io/" title="High-Cold" target="_blank">High-Cold</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sherlockpan.github.io/" title="SherlockPan" target="_blank">SherlockPan</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://justin-nickel-wu.tk/" title="Justin_Wu" target="_blank">Justin_Wu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cmxrynp.github.io/" title="CMXRYNP" target="_blank">CMXRYNP</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/zhouyuheng2003/" title="zhouyuheng2003" target="_blank">zhouyuheng2003</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/qq_36056315/" title="Michael_Li" target="_blank">Michael_Li</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件源更改"><span class="nav-number">1.</span> <span class="nav-text">软件源更改</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐（假的）："><span class="nav-number">1.1.</span> <span class="nav-text">推荐（假的）：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Chrome"><span class="nav-number">2.</span> <span class="nav-text">安装Chrome</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Sublime-Text-3"><span class="nav-number">3.</span> <span class="nav-text">安装Sublime Text 3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装好看的主题！"><span class="nav-number">4.</span> <span class="nav-text">安装好看的主题！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Numix"><span class="nav-number">4.1.</span> <span class="nav-text">1.Numix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-高仿Mac-Os主题"><span class="nav-number">4.2.</span> <span class="nav-text">2.高仿Mac-Os主题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装QQ、TIM、迅雷、百度云等windows应用（高阶玩法）"><span class="nav-number">5.</span> <span class="nav-text">安装QQ、TIM、迅雷、百度云等windows应用（高阶玩法）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尾声（怎么这么别扭）"><span class="nav-number">6.</span> <span class="nav-text">尾声（怎么这么别扭）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">oycy0306</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'o4k1bjHtPTVWx1aHMTmK5Brm-gzGzoHsz',
+        appKey: 'rpSJDnpn6YOkSL0zYVzv59MK',
+        placeholder: '大爷留个评论呗',
+        avatar:'retro',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<!-- ����鸴�ƹ��� -->
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true},"log":false});</script></body>
+</html>
