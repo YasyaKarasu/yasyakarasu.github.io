@@ -19,7 +19,7 @@ const ap = new APlayer({
         name: '夜に駆ける',
         artist: 'YOASOBI',
         url: 'https://www.ytmp3.cn/down/75494.mp3',
-        cover: 'https://img4.kuwo.cn/star/albumcover/500/16/0/1308868856.jpg',
+        cover: 'https://img2.kuwo.cn/star/albumcover/500/20/61/3054825344.jpg',
       },
       {
         name: 'たぶん',
